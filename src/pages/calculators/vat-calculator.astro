@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import VatCalculatorComponent from '../../components/VatCalculatorComponent.jsx';
+
+const title = 'VAT Calculator';
+const description = 'Calculate your VAT payments using our VAT calculator.';
+---
+
+<BaseLayout title={title} description={description}>
+    <div class="calculator-container">
+        <VatCalculatorComponent client:load />
+    </div>
+    <div class="content">
+        <h2>How to Use the VAT Calculator</h2>
+        <p>Enter the amount, vat rate, and add or subtract to calculate your VAT.</p>
+        <!-- Add more content, tables, graphs, etc. -->
+    </div>
+</BaseLayout>
+
+<style>
+    .calculator-container {
+        margin-bottom: 2rem;
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+</style>
+

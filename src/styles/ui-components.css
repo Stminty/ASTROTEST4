@@ -1,0 +1,26 @@
+/* src/styles/ui-components.css */
+    :root {
+        /* Variables for UI components */
+        --border: 96, 115, 159 / 90%;
+        --input: 96, 115, 159 / 90%;
+        --ring: 15, 18, 25 / 10%;
+        --radius: 0.5rem;
+      
+        /* Primary colors based on your accent */
+        --primary: 35, 55, 255; /* RGB of your accent color */
+        --primary-foreground: 255, 255, 255;
+        --secondary: 229, 233, 240;
+        --secondary-foreground: 15, 18, 25;
+        --destructive: 220, 38, 38; /* A red color for destructive actions */
+        --destructive-foreground: 255, 255, 255;
+        --muted: 229, 233, 240;
+        --muted-foreground: 96, 115, 159;
+      }
+      
+      /* Optional dark mode variants */
+      .dark {
+        --primary: 55, 75, 255;
+        --primary-foreground: 255, 255, 255;
+        --secondary: 34, 41, 57;
+        --secondary-foreground: 229, 233, 240;
+      }

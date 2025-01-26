@@ -8,11 +8,8 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} heroImage={heroImage}>
     <article>
-        <div class="hero-image">
-            {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
-        </div>
         <div class="prose">
             <div class="title">
                 <div class="date">
@@ -34,16 +31,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 </BaseLayout>
 
 <style>
-    .hero-image {
-        width: 100%;
-        background-color: rgb(243 244 246); /* gray-100 in Tailwind */
-    }
-    .hero-image img {
-        display: block;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: var(--box-shadow);
-    }
     .prose {
         width: 720px;
         max-width: calc(100% - 2em);
@@ -66,25 +53,5 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     }
     .last-updated-on {
         font-style: italic;
-    }
-
-    /* Dark mode styles */
-    :global(.dark) .hero-image {
-        background-color: rgb(17 24 39); /* or rgb(15, 23, 42) to match BaseLayout */
-    }
-    :global(.dark) .prose {
-        color: #e5e7eb;
-    }
-    :global(.dark) .title h1 {
-        color: white;
-    }
-    :global(.dark) .date {
-        color: #9ca3af;
-    }
-    :global(.dark) hr {
-        border-color: #374151;
-    }
-    :global(.dark) .hero-image img {
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
     }
 </style>

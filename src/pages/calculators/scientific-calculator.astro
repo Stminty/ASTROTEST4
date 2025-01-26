@@ -1,0 +1,24 @@
+---
+import CalculatorLayout from '../../layouts/CalculatorLayout.astro';
+import ScientificCalculatorComponent from '../../components/ScientificCalculatorComponent.jsx';
+
+const title = 'Scientific Calculator';
+const description = 'Advanced scientific calculator with trigonometric functions, logarithms, and complex math operations.';
+---
+
+<CalculatorLayout title={title} description={description}>
+  <div slot="calculator">
+    <ScientificCalculatorComponent client:load />
+  </div>
+  <div slot="content">
+    <h2 class="text-2xl font-bold mb-4">Features</h2>
+    <ul class="space-y-2">
+      <li>• Trigonometric functions (sin, cos, tan) and their inverses</li>
+      <li>• Logarithmic functions (log, ln)</li>
+      <li>• Constants (π, e)</li>
+      <li>• Power functions and roots</li>
+      <li>• DEG/RAD angle mode</li>
+      <li>• Calculation history</li>
+    </ul>
+  </div>
+</CalculatorLayout>

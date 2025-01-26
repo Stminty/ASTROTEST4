@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MortgageCalculatorComponent from '../../components/MortgageCalculatorComponent.jsx';
+
+const title = 'Mortgage Calculator';
+const description = 'Calculate your monthly mortgage payments using our mortgage calculator.';
+---
+
+<BaseLayout title={title} description={description}>
+    <div class="calculator-container">
+        <MortgageCalculatorComponent client:load />
+    </div>
+    <div class="content">
+        <h2>How to Use the Mortgage Calculator</h2>
+        <p>Enter the loan amount, interest rate, and loan term to calculate your monthly mortgage payment.</p>
+        <!-- Add more content, tables, graphs, etc. -->
+    </div>
+</BaseLayout>
+
+<style>
+    .calculator-container {
+        margin-bottom: 2rem;
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+</style>

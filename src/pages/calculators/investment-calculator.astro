@@ -1,0 +1,40 @@
+---
+import CalculatorLayout from '../../layouts/CalculatorLayout.astro';
+import InvestmentCalculatorComponent from '../../components/InvestmentCalculatorComponent.jsx';
+
+
+const title = 'Investment Returns Calculator';
+const description = 'Calculate your potential investment returns with ETFs, compound interest and regular contributions. Includes Monte Carlo simulations.';
+---
+
+<CalculatorLayout title={title} description={description}>
+  <div slot="calculator">
+    <InvestmentCalculatorComponent client:load />
+  </div>
+  <div slot="content">
+    <h2 class="text-2xl font-bold mb-4">Understanding Investment Returns</h2>
+    <p class="mb-4">
+      This calculator helps you estimate potential returns on your investments considering:
+      - Initial investment amount
+      - Regular monthly contributions
+      - Expected annual return rates from popular ETFs
+      - Investment time horizon
+    </p>
+    
+    <h3 class="text-xl font-bold mb-2">Monte Carlo Simulation</h3>
+    <p class="mb-4">
+      The Monte Carlo simulation shows multiple possible outcomes based on market volatility. Each line represents a different scenario, helping you understand the range of potential returns.
+    </p>
+
+    <h3 class="text-xl font-bold mb-2">ETF Information</h3>
+    <p class="mb-4">
+      The calculator includes historical performance data for popular ETFs:
+      - SPY (S&P 500): Tracks the 500 largest US companies
+      - QQQ (Nasdaq 100): Focuses on tech-heavy companies
+      - VTI: Represents the total US stock market
+      - AGG: Tracks US investment-grade bonds
+      - VGK: European stock market exposure
+      - EEM: Emerging markets exposure
+    </p>
+  </div>
+</CalculatorLayout>
