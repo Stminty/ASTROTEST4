@@ -1,0 +1,19 @@
+---
+import CalculatorLayout from '../../layouts/CalculatorLayout.astro';
+import PercentageCalculatorComponent from '../../components/PercentageCalculatorComponent.jsx';
+
+const title = 'Percentage Calculator';
+const description = 'Calculate percentages and percentage changes with this easy-to-use calculator.';
+---
+
+<CalculatorLayout title={title} description={description}>
+  <div slot="calculator">
+    <PercentageCalculatorComponent client:load />
+  </div>
+  <div slot="content">
+    <h2 class="text-2xl font-bold mb-4">About Percentages</h2>
+    <p class="mb-4">
+      A percentage represents a fraction of 100. For example, 50% means 50 parts per 100, or one-half of the whole.
+    </p>
+  </div>
+</CalculatorLayout>
